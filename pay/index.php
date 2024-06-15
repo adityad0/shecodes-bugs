@@ -57,10 +57,8 @@
                 echo "Price per page: &#8377;1<br>";
                 echo "Total Amount: &#8377;" . $amt . "<br>";
 
-                $keyId = "rzp_live_9VUFESYzpApXU5";
-                $keySecret = "hE6DNhmZG13lLJy8KFd5TZwO";
-                // $keyId = 'rzp_test_XHhsxqp3QutpNV';
-                // $keySecret = 'bAdGLohVGrNeXREqeQc6hhz2';
+                $keyId = "";
+                $keySecret = "";
 
                 $api = new Api($keyId, $keySecret);
 
