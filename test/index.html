@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize PDF</title>
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body style="overflow-x: hidden;">
+    <div class="container">
+        <br>
+        <div id="pdf-controls">
+            <button class="btn btn-outline-primary" id="prev-page"><span class="material-symbols-rounded color-cyan">skip_previous</span>&nbsp;Previous</button>
+            <button class="btn btn-outline-primary" id="next-page"><span class="material-symbols-rounded color-cyan">skip_next</span>&nbsp;Next</button>
+            <button class="btn btn-outline-primary" id="zoom-in"><span class="material-symbols-rounded color-cyan">zoom_in</span>&nbsp;Zoom In</button>
+            <button class="btn btn-outline-primary" id="zoom-out"><span class="material-symbols-rounded color-cyan">zoom_out</span>&nbsp;Zoom Out</button>
+            <button class="btn btn-outline-primary" id="rotate-cw"><span class="material-symbols-rounded color-cyan">rotate_right</span>&nbsp;Rotate Clockwise</button>
+            <button class="btn btn-outline-primary" id="rotate-ccw"><span class="material-symbols-rounded color-cyan">rotate_left</span>&nbsp;Rotate Counterclockwise</button>
+            <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
+        </div>
+        <br>
+        <div id="pdf-viewer" style="width: 100%; border: 1px solid black; text-align: center;"></div>
+        <br>
+    </div>
+    <div class="container">
+        <form id="upload-form" action="upload.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="doc_id" value="<?php echo $newFileName; ?>" required>
+            <input type="hidden" id="payFormPageCount" name="page_count" value="" required>
+            <input type="checkbox" name="agreement" id="agreement" required>&nbsp;I agree that the document is correct and ready to be printed.
+            <br><br>
+            <button class="btn btn-outline-primary" style="width: 100%;" id="resize">
+                <span class="material-symbols-rounded color-cyan">print</span>&nbsp;Pay & Print
+            </button>
+        </form>
+        <br><br>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.worker.min.js"></script>
+    <script src="resize_pdf.js"></script>
+</body>
+</html>
