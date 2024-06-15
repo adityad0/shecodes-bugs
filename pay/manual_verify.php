@@ -1,9 +1,7 @@
 <?php
     // Set your key ID and key secret
-    $keyId = 'rzp_live_9VUFESYzpApXU5';
-    $keySecret = 'hE6DNhmZG13lLJy8KFd5TZwO';
-    // $keyId = 'rzp_test_XHhsxqp3QutpNV';
-    // $keySecret = 'bAdGLohVGrNeXREqeQc6hhz2';
+    $keyId = '';
+    $keySecret = '';
 
     header('Content-Type: application/json');
 
