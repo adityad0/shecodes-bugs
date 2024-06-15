@@ -6,10 +6,8 @@
     session_start();
 
     // Set your Razorpay API key and secret
-    // $api_key = 'rzp_live_9VUFESYzpApXU5';
-    // $api_secret = 'hE6DNhmZG13lLJy8KFd5TZwO';
-    $api_key = 'rzp_test_XHhsxqp3QutpNV';
-    $api_secret = 'bAdGLohVGrNeXREqeQc6hhz2';
+    $api_key = '';
+    $api_secret = '';
     $api = new Api($api_key, $api_secret);
 
     // Retrieve the Razorpay payment details from the URL
